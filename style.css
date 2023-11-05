@@ -21,14 +21,14 @@
   
   h1{
     font-family: 'PS-Bold';
-    color: white;
+    color: black;
   }
   
   h2{
     margin-bottom: 0;
     font-family: 'PS-Black';
     font-size: 1.8em;
-    color: white;
+    color: black;
   }
   
   div {
@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'PS-Regular';
-    color: white;
+    color: black;
   }
   
   .parent {
@@ -54,13 +54,13 @@
     align-items: center;
     margin-bottom: 20px;
     font-family: 'PS-Regular';
-    color: white;
+    color: black;
   }
   
   input[type="number"] {
         width: 80px;
         font-family: 'PS-Regular';
-        color: white;
+        color: black;
       }
   
   small {
