@@ -31,6 +31,14 @@
     color: black;
   }
   
+  h4{
+    margin-bottom: 0;
+    font-family: 'PS-Bold';
+    font-size: 1em;
+    color: white;
+    text-align: center;
+  }
+
   div {
     display: flex;
     justify-content: center;
@@ -191,8 +199,44 @@
       display: flex;
     flex-direction: column;
     line-height: 20px;
+    text-align: center;
+    align-content: center;
   }
   
+  div{
+    align-content: center;
+    text-align: center;
+    vertical-align: center;
+    display : flex;
+  }
+
+  #plIDText{
+    text-align: center;
+    display: block;
+    line-height: 1;
+  }
+
+  .plIDLabel, textarea {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    .plIDLabel{
+        position: relative;
+        top: 50%;
+        transform: translateY(-25%);
+    }
+
+  textarea{
+    resize: none;
+  }
+
+  label{
+    text-align: center;
+    color: white;
+    display: block;
+  }
+
   #title{
     font-family: 'PS-Black';
     font-size: 3em;
