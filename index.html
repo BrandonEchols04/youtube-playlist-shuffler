@@ -32,9 +32,9 @@
             <div>
                 <button id="shuffleButton" onclick="shufflePlaylist()" class="shuffleButton">Shuffle</button>&nbsp&nbsp
                 <button id="searchButton" onclick="searchPlaylist()" class="searchButton">Search</button>
-            </div><br>
+            </div><h4>00000 Videos</h4><br>
             <div>
-                <select name="videoList" id="list" size="15" style="background-color: #404040; color: white; width: 650px; font-family: 'SCP-Regular';">
+                <select name="videoList" id="list" size="15" style="background-color: #404040; color: white; width: 650px; font-family: 'SCP-Regular'; border-radius: 5px; border: 1px solid #434343;">
                 <option value="0">1 — Song 1...</option>
                 <option value="1">2 — Song 2...</option>
                 <option value="2">3 — Song 3...</option>
@@ -47,6 +47,10 @@
             <div>
                 <br><button id="copyButton" onclick="copyPlaylistLink()" class="copyButton">Copy Shuffler Link</button>&nbsp&nbsp
             </div>
+        </div>
+
+        <div>
+            <h4 id="footer" style="color: black;">Created by <a href="github.com/BrandonEchols04/youtube-playlist-shuffler" target="_blank" style="color: black;">Brandon Echols.</a></h4>
         </div>
 
     </main>
