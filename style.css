@@ -11,6 +11,13 @@
     font-style: normal;
     font-weight: 400;
   }
+
+  @font-face {
+    font-family: 'SCP-Regular';
+    src: url('fonts/SourceCodePro-Regular.ttf');
+    font-style: normal;
+    font-weight: 100;
+  }
   
   @font-face {
     font-family: 'PS-Black';
@@ -232,6 +239,20 @@
   }
 
   .videoButton{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #434343;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #404040;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'PS-Regular';
+  }
+
+  .copyButton{
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
