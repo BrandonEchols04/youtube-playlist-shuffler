@@ -231,6 +231,20 @@
     resize: none;
   }
 
+  .videoButton{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #434343;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #404040;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'PS-Regular';
+  }
+
   label{
     text-align: center;
     color: white;
