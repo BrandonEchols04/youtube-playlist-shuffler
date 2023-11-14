@@ -14,16 +14,19 @@
         <div class="container">
             <div>
             <div class="plIDLabel"><h4 id="plIDText">Enter Playlist IDs:&nbsp&nbsp</h4></div>
+<<<<<<< HEAD
             <textarea rows="4" cols="40"></textarea>
+=======
+            <textarea rows="4" cols="40" id="playlistIDs"></textarea>
+>>>>>>> 6ba5046 (Fetching Algoritm Finished)
             </div>
         </div>
 
         <div class="container">
-            <iframe width="480" height="270"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            <iframe width="480" height="270" src="" frameborder="0" allowfullscreen style="border-radius: 5px; border: 1px solid #434343;" id="videoPlayer">
             </iframe>   
             <div>
-                <button id="backButton" onclick="backVideo()" lass="videoButton">Back</button>&nbsp&nbsp
+                <button id="backButton" onclick="backVideo()" class="videoButton">Back</button>&nbsp&nbsp
                 <button id="nextButton" onclick="nextVideo()" class="videoButton">Next</button>
             </div>
         </div>
@@ -32,6 +35,7 @@
             <div>
                 <button id="shuffleButton" onclick="shufflePlaylists()" class="shuffleButton">Shuffle</button>&nbsp&nbsp
                 <button id="searchButton" onclick="searchPlaylists()" class="searchButton">Search</button>
+<<<<<<< HEAD
             </div><h4>00000 Videos</h4><br>
             <div>
 
@@ -56,10 +60,30 @@
                 <option value="18">18 — Song 18...</option>
                 <option value="19">19 — Song 19...</option>
                 <option value="20">20 — Song 20...</option>
+=======
+            </div><h4 id="numberOfVideos">00000 Videos</h4><br>
+            <div>
+                <select name="videoList" id="videoList" size="15" style="background-color: #404040; color: white; width: 650px; font-family: 'SCP-Regular'; border-radius: 5px; border: 1px solid #434343;">
+                <option value="0">1 — ...</option>
+                <option value="1">2 — ...</option>
+                <option value="2">3 — ...</option>
+                <option value="3">4 — ...</option>
+                <option value="4">5 — ...</option>
+                <option value="5">6 — ...</option>
+                <option value="6">7 — ...</option>
+                <option value="0">8 — ...</option>
+                <option value="1">9 — ...</option>
+                <option value="2">10 — ...</option>
+                <option value="3">11 — ...</option>
+                <option value="4">12 — ...</option>
+                <option value="5">13 — ...</option>
+                <option value="6">14 — ...</option>
+                <option value="6">15 — ...</option>
+>>>>>>> 6ba5046 (Fetching Algoritm Finished)
                 </select>
             </div>
             <div>
-                <br><button id="copyButton" onclick="copyPlaylistLink()" class="copyButton">Copy Shuffler Link</button>&nbsp&nbsp
+                <br><button id="copyButton" onclick="copyLink()" class="copyButton">Copy Shuffler Link</button>&nbsp&nbsp
             </div>
         </div>
 
@@ -68,6 +92,7 @@
         </div>
 
     </main>
-	<script src="script.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
   </body>
 </html>

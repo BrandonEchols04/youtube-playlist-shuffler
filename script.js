@@ -4,12 +4,19 @@ const shuffleButton = document.getElementById("shuffleButton");
 const searchButton = document.getElementById("searchButton");
 const nextButton = document.getElementById("nextButton");
 const backButton = document.getElementById("backButton");
+<<<<<<< HEAD
 let player;
+=======
+>>>>>>> 6ba5046 (Fetching Algoritm Finished)
 
 function shufflePlaylists(){
     const playlistIDs = document.getElementById("playlistIDs").value.split("\n");
     console.log("Playlist IDs: " + playlistIDs);
+<<<<<<< HEAD
     const apiKey = 'AIzaSyC6G420iL4LkTTGkxMZkiDYdniuHJQo0jg';
+=======
+    const apiKey = 'AIzaSyCPwLQhVhomLJeECNwyNDbcjfQP4oHD90c';
+>>>>>>> 6ba5046 (Fetching Algoritm Finished)
     let videos = []
     let fetchPromises = playlistIDs.map(playlistId => fetchVideos(playlistId));
     Promise.all(fetchPromises)
@@ -42,6 +49,7 @@ function shufflePlaylists(){
                 const j = Math.floor(Math.random() * (i + 1));
                 [videos[i], videos[j]] = [videos[j], videos[i]];
             }
+<<<<<<< HEAD
 
             // Populate videoList
             videos.forEach((video, index) => {
@@ -55,11 +63,14 @@ function shufflePlaylists(){
             videoList.selectedIndex = 0;
             videoList.onchange();
 
+=======
+>>>>>>> 6ba5046 (Fetching Algoritm Finished)
             console.log(videos);
         })
         .catch(error => console.error('Error:', error));
 }
 
+<<<<<<< HEAD
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('videoPlayer', {
         height: '270',
@@ -102,6 +113,16 @@ function nextVideo() {
         videoList.selectedIndex++;
         videoList.onchange();
     }
+=======
+
+function backVideo(){
+
+}
+
+
+function nextVideo(){
+
+>>>>>>> 6ba5046 (Fetching Algoritm Finished)
 }
 
 
