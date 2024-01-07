@@ -60,19 +60,11 @@ function shufflePlaylists(){
         .catch(error => console.error('Error:', error));
 }
 
-videoList.onchange = function() {
-    const selectedUrl = this.value;
-
-    if (player) {
-        player.destroy();
-    }
-
-    let videoId = selectedUrl.split('embed/')[1];
-
+function onYouTubeIframeAPIReady() {
     player = new YT.Player('videoPlayer', {
         height: '270',
         width: '480',
-        videoId: videoId, // pass the videoId, not the full URL
+        videoId: '', // initially, no video is loaded
         playerVars: {
             autoplay: 1
         },
@@ -84,6 +76,14 @@ videoList.onchange = function() {
             }
         }
     });
+}
+
+videoList.onchange = function() {
+    const selectedUrl = this.value;
+    let videoId = selectedUrl.split('embed/')[1];
+    if (player) {
+        player.loadVideoById(videoId);
+    }
 };
 
 function backVideo() {
