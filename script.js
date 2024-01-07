@@ -4,11 +4,12 @@ const shuffleButton = document.getElementById("shuffleButton");
 const searchButton = document.getElementById("searchButton");
 const nextButton = document.getElementById("nextButton");
 const backButton = document.getElementById("backButton");
+let player;
 
 function shufflePlaylists(){
     const playlistIDs = document.getElementById("playlistIDs").value.split("\n");
     console.log("Playlist IDs: " + playlistIDs);
-    const apiKey = 'AIzaSyCPwLQhVhomLJeECNwyNDbcjfQP4oHD90c';
+    const apiKey = 'AIzaSyC6G420iL4LkTTGkxMZkiDYdniuHJQo0jg';
     let videos = []
     let fetchPromises = playlistIDs.map(playlistId => fetchVideos(playlistId));
     Promise.all(fetchPromises)
@@ -41,19 +42,60 @@ function shufflePlaylists(){
                 const j = Math.floor(Math.random() * (i + 1));
                 [videos[i], videos[j]] = [videos[j], videos[i]];
             }
+
+            // Populate videoList
+            videos.forEach((video, index) => {
+                let option = document.createElement("option");
+                option.value = video.url;
+                option.text = `${index + 1} - ${video.title}`;
+                videoList.appendChild(option);
+            });
+
+            // Select the first option
+            videoList.selectedIndex = 0;
+            videoList.onchange();
+
             console.log(videos);
         })
         .catch(error => console.error('Error:', error));
 }
 
+videoList.onchange = function() {
+    const selectedUrl = this.value;
 
-function backVideo(){
+    if (player) {
+        player.destroy();
+    }
 
+    player = new YT.Player('videoPlayer', {
+        height: '270',
+        width: '480',
+        videoId: selectedUrl.split('embed/')[1],
+        playerVars: {
+            autoplay: 1
+        },
+        events: {
+            onStateChange: function(event) {
+                if (event.data === YT.PlayerState.ENDED) {
+                    nextVideo();
+                }
+            }
+        }
+    });
+};
+
+function backVideo() {
+    if (videoList.selectedIndex > 0) {
+        videoList.selectedIndex--;
+        videoList.onchange();
+    }
 }
 
-
-function nextVideo(){
-
+function nextVideo() {
+    if (videoList.selectedIndex < videoList.options.length - 1) {
+        videoList.selectedIndex++;
+        videoList.onchange();
+    }
 }
 
 
