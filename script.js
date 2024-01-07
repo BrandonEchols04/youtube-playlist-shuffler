@@ -67,10 +67,12 @@ videoList.onchange = function() {
         player.destroy();
     }
 
+    let videoId = selectedUrl.split('embed/')[1];
+
     player = new YT.Player('videoPlayer', {
         height: '270',
         width: '480',
-        videoId: selectedUrl.split('embed/')[1],
+        videoId: videoId, // pass the videoId, not the full URL
         playerVars: {
             autoplay: 1
         },
