@@ -76,11 +76,13 @@ function onYouTubeIframeAPIReady() {
             }
         }
     });
+    console.log('YouTube player initialized:', player);
 }
 
 videoList.onchange = function() {
     const selectedUrl = this.value;
     let videoId = selectedUrl.split('embed/')[1];
+    console.log('Current player:', player);
     if (player) {
         player.loadVideoById(videoId);
     }
