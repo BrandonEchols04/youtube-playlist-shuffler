@@ -83,7 +83,7 @@ videoList.onchange = function() {
     const selectedUrl = this.value;
     let videoId = selectedUrl.split('embed/')[1];
     console.log('Current player:', player);
-    if (player) {
+    if (player && typeof player.loadVideoById === 'function') {
         player.loadVideoById(videoId);
     }
 };
