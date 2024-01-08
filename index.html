@@ -14,31 +14,38 @@
         <div class="container">
             <div>
             <div class="plIDLabel"><h4 id="plIDText">Enter Playlist IDs:&nbsp&nbsp</h4></div>
-            <textarea rows="4" cols="40" id="playlistIDs"></textarea>
+            <textarea rows="4" cols="30"></textarea>
             </div>
         </div>
 
         <div class="container">
-            <iframe width="480" height="270" src="" frameborder="0" allowfullscreen style="border-radius: 5px; border: 1px solid #434343;" id="videoPlayer">
+            <iframe width="480" height="270"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
             </iframe>   
             <div>
-                <button id="backButton" onclick="backVideo()" class="videoButton">Back</button>&nbsp&nbsp
+                <button id="backButton" onclick="backVideo()" lass="videoButton">Back</button>&nbsp&nbsp
                 <button id="nextButton" onclick="nextVideo()" class="videoButton">Next</button>
             </div>
         </div>
 
         <div class="container">
             <div>
-                <button id="shuffleButton" onclick="shufflePlaylists()" class="shuffleButton">Shuffle</button>&nbsp&nbsp
-                <button id="searchButton" onclick="searchPlaylists()" class="searchButton">Search</button>
-            </div><h4 id="numberOfVideos">00000 Videos</h4><br>
+                <button id="shuffleButton" onclick="shufflePlaylist()" class="shuffleButton">Shuffle</button>&nbsp&nbsp
+                <button id="searchButton" onclick="searchPlaylist()" class="searchButton">Search</button>
+            </div><h4>00000 Videos</h4><br>
             <div>
-                <select name="videoList" id="videoList" size="15" style="background-color: #404040; color: white; width: 650px; font-family: 'SCP-Regular'; border-radius: 5px; border: 1px solid #434343;">
-                
+
+                <select name="videoList" id="videoList" size="15" style="background-color: #404040; color: white; width: 650px; font-family: 'SCP-Regular'; border-radius: 5px; border: 1px solid #434343;">                <option value="0">1 — Song 1...</option>
+                <option value="1">2 — Song 2...</option>
+                <option value="2">3 — Song 3...</option>
+                <option value="3">4 — Song 4...</option>
+                <option value="4">5 — Song 5...</option>
+                <option value="5">6 — Song 6...</option>
+                <option value="6">7 — Song 7...</option>
                 </select>
             </div>
             <div>
-                <br><button id="copyButton" onclick="copyLink()" class="copyButton">Copy Shuffler Link</button>&nbsp&nbsp
+                <br><button id="copyButton" onclick="copyPlaylistLink()" class="copyButton">Copy Shuffler Link</button>&nbsp&nbsp
             </div>
         </div>
 
@@ -47,7 +54,6 @@
         </div>
 
     </main>
-	<script src="https://www.youtube.com/iframe_api"></script>
-    <script src="script.js"></script>
+	<script src="script.js"></script>
   </body>
 </html>
